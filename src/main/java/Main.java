@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) throws IOException {
         List<Quote> quotes = new ArrayList<>();
-        quotes=quotesListTransformator();
+        quotes = quotesListTransformator();
         QuoteService quoteService = new QuoteService(quotes);
 
         quoteService.setFavourite(1);
@@ -34,17 +34,17 @@ public class Main {
 
     public static List<Quote> quotesListTransformator() throws IOException {
         List<Quote> result = new ArrayList<>();
-        int i=0;
+        int i = 0;
         BufferedReader reader = new BufferedReader(new FileReader("quotes.txt"));
         String line;
         while ((line = reader.readLine()) != null) {
-            result.add(quoteFromLine(line,i));
+            result.add(quoteFromLine(line, i));
             i++;
         }
         return result;
     }
 
-    private static Quote quoteFromLine(String line,int i) {
+    private static Quote quoteFromLine(String line, int i) {
         String[] tokens = line.split(Pattern.quote("~"));
         return new Quote(i, tokens[0], tokens[1]);
     }

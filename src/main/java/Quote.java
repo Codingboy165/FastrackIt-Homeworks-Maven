@@ -54,20 +54,4 @@ public class Quote {
                 "Author=" + author + ", " +
                 "Quote=" + quote + ']';
     }
-
-
-//    private int id;
-//    private String author;
-//    private String quote;
-//    private boolean favourite;
-//
-//
-//    public Quote( String author, String quote) {
-//        this.author = author;
-//        this.quote = quote;
-//    }
-//
-//    public void setFavourite(boolean favourite) {
-//        this.favourite = favourite;
-//    }
 }
