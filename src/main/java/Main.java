@@ -48,4 +48,5 @@ public class Main {
         String[] tokens = line.split(Pattern.quote("~"));
         return new Quote(i, tokens[0], tokens[1]);
     }
+
 }
